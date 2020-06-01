@@ -1,0 +1,25 @@
+This repository has the objective of implementing a game named Tales of Nothing.
+It's battle system and characters were inspired in the RPG game called Dungeons and Dragons.
+
+COMMANDS TO RUN THE PROGRAM:
+
+MAKE ALL - compilation of the executable that runs the game
+./game - run the executable that executes the game
+
+MAKE TEST - compilation of the executable that runs the test unity
+./game_test - run the executable that executes the tests for the classes created
+
+The makefile was configured in a way that the user won't need to install any third  part softwares, 
+since the boost library needed is include in the repository.
+
+READ THIS IF YOU HAVE ANY PROBLEMS COMPILING YOUR PROGRAM
+
+If you encounters compilation problems, it might be caused by the boost library, since we tested in some computers
+but there's always a chance it won't work in another one.
+You should carry out the following instructions:
+1. Enter your terminal and paste:
+sudo apt-get update
+sudo apt-get install boost
+2. So go to the makefile situated in the folder called RPG and edit it:
+In the line 11 you will find : BOOST = ./third_parties/boost_1_66_0
+Delete it and write in it's place:  BOOST = /usr/boost
